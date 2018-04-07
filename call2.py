@@ -7,15 +7,19 @@ response = requests.get('https://api.github.com/repos/code-dot-org/code-dot-org/
 # 	pass
 
 i = 0
-str = ""
+stri = ""
 
 # for obj in json.loads(response.content)
 # 	print("a")
 	# dict2 = 
 	# print(dict2['body'])
-print(len(json.loads(response.content)))
+var = len(json.loads(response.content))
 
-while (i < 30):
+while (i < var):
 	dict2 = json.loads(response.content)[i]
-	print(dict2['body'])
+	comment = dict2['body']
+	# print(comment)
 	i = i + 1
+	stri = stri + comment
+
+print(stri)
