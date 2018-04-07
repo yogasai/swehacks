@@ -1,7 +1,7 @@
 import requests
 import json
 
-response = requests.get('https://api.github.com/repos/code-dot-org/code-dot-org/comments', auth = ('satvikshukla', '&azgithub19'))
+response = requests.get('https://api.github.com/repos/tensorflow/tensorflow/comments', auth = ('satvikshukla', '&azgithub19'))
 
 # for i in response(1,10):
 # 	pass
@@ -23,3 +23,4 @@ while (i < var):
 	stri = stri + comment
 
 print(stri)
+print(var)
