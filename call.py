@@ -54,9 +54,18 @@ tone_analyzer = ToneAnalyzerV3(
     password ='PN7c4sKsk0OD'
 )
 
-text = 'Team, I know that times are tough! Product sales have been disappointing for the past three quarters. We have a competitive product, but we need to do a better job of selling it!'
+f = open('sent.txt', 'r')
+
+stri = ""
+
+for line in f:
+    stri = stri + line
+
+text = stri
+
+# text = 'Team, I know that times are tough! Product sales have been disappointing for the past three quarters. We have a competitive product, but we need to do a better job of selling it!'
 content_type = 'application/json'
 
-tone = tone_analyzer.tone({"text": text},content_type)
+tone = tone_analyzer.tone({"text": text},content_type, sentences = False)
 
 print(json.dumps(tone, indent=2))

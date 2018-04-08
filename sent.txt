@@ -1,0 +1,6 @@
+I think you are seeing this issue:
+
+https://stackoverflow.com/questions/19319963/how-to-avoid-seams-between-filled-areas-in-canvas
+
+Antialiasing leads to this effect where the background sneaks through a gap between the polygons. I guess you're right, thanks for the comment @alexprand.
+As a minor possible improvement of your "newOptions" version, maybe putting the sliders on two columns (quantitative on one side, categorical on the other) would make the interface more compact and homogeneous. But this new version is great!I just added another commit with another option "Dots" that will create stippled images by drawing non-overlapping circles at the Voronoi sites. Yea, I've noticed this -- it's one the list (thanks for opening an issue). I'll take this one. Close a249bbdfef300239c8a65c270549ae547bc29708I am going to close this and put up a new pull request once the react branch merges (and I get a chance to update this code to that structure).
